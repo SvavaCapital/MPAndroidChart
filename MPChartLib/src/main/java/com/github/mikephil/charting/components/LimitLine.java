@@ -26,6 +26,9 @@ public class LimitLine extends ComponentBase {
     /** the color of the limit line */
     private int mLineColor = Color.rgb(237, 91, 91);
 
+    /** the color of the limit line background */
+    private int mLabelBgColor = Color.TRANSPARENT;
+
     /** the style of the label text */
     private Paint.Style mTextStyle = Paint.Style.FILL_AND_STROKE;
 
@@ -108,6 +111,7 @@ public class LimitLine extends ComponentBase {
         mLineColor = color;
     }
 
+
     /**
      * Returns the color that is used for this LimitLine
      * 
@@ -115,6 +119,26 @@ public class LimitLine extends ComponentBase {
      */
     public int getLineColor() {
         return mLineColor;
+    }
+
+    /**
+     * Sets the linecolor for this LimitLine background. Make sure to use
+     * getResources().getColor(...)
+     *
+     * @param color
+     */
+    public void setLabelBgColor(int color) {
+        mLabelBgColor = color;
+    }
+
+
+    /**
+     * Returns the color that is used for this LimitLine background
+     *
+     * @return
+     */
+    public int getLabelBgColor() {
+        return mLabelBgColor;
     }
 
     /**
